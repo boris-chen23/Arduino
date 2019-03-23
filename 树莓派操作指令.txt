@@ -1,0 +1,44 @@
+打开摄像头软件位置
+cd  mjpg-streamer/mjpg-streamer-experimental
+
+打开摄像头指令--复制到LX终端
+ ./mjpg_streamer -i "./input_raspicam.so" -o "./output_http.so -w ./www"
+   
+1、WIFI程序hjduino.c 
+编译指令
+  gcc  hjduino.c  -o hjduino   -lwiringPi   -lpthread     （注意前面有空格 加中间的空格位置）  
+运行命令是
+sudo  ./hjduino 2000
+
+2、循迹程序xj.c 
+编译指令
+  gcc  xj.c  -o xj   -lwiringPi   -lpthread     （注意前面有空格 加中间的空格位置）  
+运行命令是
+sudo  ./xj
+
+3、红外避障程序bz.c 
+编译指令
+  gcc  bz.c  -o bz   -lwiringPi   -lpthread     （注意前面有空格 加中间的空格位置）  
+运行命令是
+sudo  ./bz
+
+4、测距程序cj.c
+编译指令   
+ gcc cj.c  -o  cj  -lwiringPi  (注意前面有空格)
+运行命令是  sudo ./cj
+
+5、超声避障pwm   csb.c 
+编译指令
+ gcc  csb.c  -o csb   -lwiringPi   -lpthread     （注意前面有空格 加中间的空格位置）  
+运行命令是
+sudo  ./csb
+
+
+停车.c 
+编译指令
+ gcc  stop.c  -o stop   -lwiringPi   -lpthread     （注意前面有空格 加中间的空格位置）  
+运行命令是
+sudo  ./stop
+
+运行编译出来的程序 sudo  ./xxx   
+xxx.c 是你要编译的C文件 xxx是编译出来的执行文件
